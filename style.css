@@ -1,0 +1,294 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url('/images/main1.jpg') ;
+}
+
+.site-background {
+  position: fixed;
+  width: 110%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
+  background: url('main1.jpg') center/cover no-repeat;
+  z-index: -1;
+  transition: transform 0.2s ease-out;
+}
+
+/* Optional dark overlay for luxury look 
+.site-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+} 
+
+/* Make content sections transparent */
+section {
+  background: transparent;
+}
+
+
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background: rgba(255, 255, 255, 0.902);
+    backdrop-filter: blur(10px);
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    position:sticky;
+    top:0;
+}
+
+header a{
+    text-decoration:none;
+    color:#6a11cb;
+    font-weight:600;
+}
+
+.logo img{
+    height:70px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* HERO */
+.hero{
+  height: 90vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white; 
+ 
+} 
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero-btn {
+  margin-top:20px;
+  padding:12px 30px;
+  background:white;
+  color:#9333ea;
+  border-radius:30px;
+  text-decoration:none;
+  display:inline-block;
+  font-weight:600;
+}
+
+/* PACKAGES */
+.packages{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.package-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    margin-top:40px;
+}
+
+.book-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    border-radius:25px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.book-btn:hover{
+    opacity:0.9;
+}
+
+
+.card{
+    background:white;
+    padding:30px;
+    width:280px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.popular{
+    background:linear-gradient(to right, #ec4899, #8b5cf6);
+    color:white;
+}
+
+/* FOOTER */
+footer{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    padding:40px;
+   backdrop-filter: blur(10px);
+    box-shadow:0 4px 10px rgba(0, 0, 0, 0.077);
+    color:rgb(241, 56, 136);
+}
+
+.map iframe{
+    width:300px;
+    height:200px;
+    border-radius:15px;
+}
+
+/* SOCIAL */
+.socials{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.socials a{
+    padding:12px;
+    border-radius:50%;
+    color:white;
+    font-size:18px;
+}
+
+.whatsapp{ background:#25D366; }
+.facebook{ background:#1877f2; }
+.instagram{ background:#E4405F; }
+.tiktok{ background:black; }
+.youtube{ background:#FF0000; }
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:20px;
+    }
+}
+
+
+/* Gallery Grid */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.gallery-img {
+  width: 300px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 15px;
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.gallery-video{
+    width:300px;
+    border-radius:15px;
+}
+
+.calendar-section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+#calendar{
+    max-width:1000px;
+    margin:40px auto;
+    background: rgb(255, 255, 255);
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.1);
+}
+
+.booked-day {
+    background: linear-gradient(135deg, #ff4d4d, #b30000) !important;
+    border-radius: 10px;
+    opacity: 0.85;
+}
+
+
+.booked {
+    background: linear-gradient(135deg, #ff4d4d, #cc0000);
+    color: white;
+    pointer-events: none;
+    border-radius: 12px;
+    opacity: 0.85;
+    cursor: not-allowed;
+    position: relative;
+}
+
+.booked::after {
+    content: "Booked";
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    opacity: 0.9;
+}
+
